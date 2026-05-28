@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import io from 'socket.io-client';
+import { API_URL } from '../../config/api';
 
-const SOCKET_SERVER_URL = 'http://localhost:3000'; // Update with your local IP when testing on mobile
+const SOCKET_SERVER_URL = API_URL;
+
 
 export const SafetyScreen = () => {
   const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
